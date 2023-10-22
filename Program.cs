@@ -100,7 +100,6 @@ namespace Labb_6_OOP_Arv
             Console.ReadKey();
             Console.Clear();
 
-            return;
         }
 
 
@@ -109,7 +108,7 @@ namespace Labb_6_OOP_Arv
         {
             List<Animal> animals = new List<Animal>();
 
-            Donkey donkey = new Donkey(speeches: "mula eller mulåsna", origin: "Egymten och Afrika", population: 450, eat: "hö" , crossing: "Zonkey");
+            Donkey donkey = new Donkey(speeches: "mula eller mulåsna", origin: "Egypten och Afrika", population: 450, eat: "hö" , crossing: "Zonkey");
             animals.Add(donkey);
 
 
@@ -129,7 +128,6 @@ namespace Labb_6_OOP_Arv
             Console.WriteLine("<--- Tryck enter för att gå tillbaka");
             Console.ReadKey();
             Console.Clear();
-            return;
         }
 
 
@@ -138,7 +136,11 @@ namespace Labb_6_OOP_Arv
         {
             while (true)
             {
-                
+                Console.WriteLine("Kattdjur är en mångfaldig familj av rovdjur som inkluderar lejon, leoparder, tigrar och geparder. " +
+                    "\nDessa fascinerande arter har unika anpassningar och spelar viktiga roller i sina ekosystem. Många av dem hotas " +
+                    "\nav människors aktiviteter, vilket gör bevarandeinsatser avgörande för deras överlevnad." +
+                    "\n");
+
                 Console.WriteLine("" +
                 "\nVilket kattdjur vill du veta mer om?" +
                 "\n------------------------------------" +
@@ -154,77 +156,76 @@ namespace Labb_6_OOP_Arv
                 Console.WriteLine("<--- Tryck enter för att gå tillbaka");
 
                 bool successfulParse = int.TryParse(Console.ReadLine(), out int userInput);
-
-                if (successfulParse)
+                while (true)
                 {
-                    Console.Clear();
-                    //Tiger
-                    if (userInput == 1)
+                    if (successfulParse)
                     {
-                        List<Animal> felidaes = new List<Animal>();
+                        Console.Clear();
+                        //Tiger
+                        if (userInput == 1)
+                        {
+                            List<Animal> felidaes = new List<Animal>();
 
-                        Tiger tiger = new Tiger(speeches: "2", origin: "Afrika och Asien", population: 4.500, eat: "kött", maxSpeed: 65, length: "1,9 – 2,8", weight: "65 – 170" );
-                        felidaes.Add(tiger);
+                            Tiger tiger = new Tiger(speeches: "2", origin: "Afrika och Asien", population: 4.500, eat: "kött", maxSpeed: 65, length: "1,9 – 2,8", weight: "65 – 170");
+                            felidaes.Add(tiger);
 
-                       
-                                tiger.AnimalSort();
-                                tiger.MakeSound();
-                                tiger.PrintInfo();
-                                tiger.Hunting();
-                                tiger.Family();
-                                tiger.Territory();
-                                tiger.FunFact();
 
-                                Console.WriteLine("" +
-                                    "\n" +
-                                    "\n" +
-                                    "\n" +
-                                    "\n" +
-                                    "\n-----------------------------------------");
-                                Console.WriteLine("<--- Tryck enter för att gå tillbaka");
-                                Console.ReadKey();
-                                Console.Clear();
-                                break;
-                            
+                            tiger.AnimalSort();
+                            tiger.MakeSound();
+                            tiger.PrintInfo();
+                            tiger.Hunting();
+                            tiger.Family();
+                            tiger.Territory();
+                            tiger.FunFact();
+
+                            Console.WriteLine("" +
+                                "\n" +
+                                "\n" +
+                                "\n" +
+                                "\n" +
+                                "\n-----------------------------------------");
+                            Console.WriteLine("<--- Tryck enter för att gå tillbaka");
+                            Console.ReadKey();
+                            Console.Clear();
+                            break;
+
+                        }
+                        //lions
+                        else if (userInput == 2)
+                        {
+                            List<Animal> felidaes = new List<Animal>();
+
+                            Lion lion = new Lion(speeches: "2", origin: "Afrika och delar av Indien", population: 30.000, eat: "Zebra, antilop", maxSpeed: 74, habitat: "savannen");
+                            felidaes.Add(lion);
+
+
+                            lion.AnimalSort();
+                            lion.PrintInfo();
+                            lion.MakeSound();
+                            lion.Hunting();
+                            lion.LionHabitat();
+                            lion.FunFact();
+
+                            Console.WriteLine("" +
+                                "\n" +
+                                "\n" +
+                                "\n" +
+                                "\n" +
+                                "\n-----------------------------------------");
+                            Console.WriteLine("<--- Tryck enter för att gå tillbaka");
+                            Console.ReadKey();
+                            Console.Clear();
+                            break;
+
+                        }
                     }
-                    //lions
-                    else if (userInput == 2)
+                    else
                     {
-                        List<Animal> felidaes = new List<Animal>();
-
-                        Lion lion = new Lion(speeches: "2", origin: "Afrika och delar av Indien", population: 30.000, eat: "Zebra, antilop", maxSpeed:74 , habitat: "savannen");
-                        felidaes.Add(lion);
-
-                        
-                                lion.AnimalSort();
-                                lion.PrintInfo();
-                                lion.MakeSound();
-                                lion.Hunting();
-                                lion.LionHabitat();
-                                lion.FunFact();
-
-                                Console.WriteLine("" +
-                                    "\n" +
-                                    "\n" +
-                                    "\n" +
-                                    "\n" +
-                                    "\n-----------------------------------------");
-                                Console.WriteLine("<--- Tryck enter för att gå tillbaka");
-                                Console.ReadKey();
-                                Console.Clear();
-                                break;
-                            
+                        Console.Clear();
+                        return;
                     }
                 }
-                else
-                {
-                    Console.Clear();
-                    return;
-                }
-
             }
-        
-            
 
         }
 

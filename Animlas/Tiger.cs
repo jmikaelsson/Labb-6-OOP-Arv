@@ -11,14 +11,18 @@ namespace Labb_6_OOP_Arv.Animlas
 
         public string Length { get; set; }
         public string Weight { get; set; }
+        public int MaxSpeed { get; set; }
+
+   
 
 
         public Tiger(string speeches, string origin, double population, string eat, int maxSpeed, string length, string weight)
-            : base(speeches, origin, population, eat, maxSpeed)
+            : base(speeches, origin, population, eat)
         {
 
             Length = length;
             Weight = weight;
+            MaxSpeed = maxSpeed;
         }
 
 
@@ -61,7 +65,7 @@ namespace Labb_6_OOP_Arv.Animlas
 
 
         //new method, only in class-tiger
-        public override void Hunting()
+        public void Hunting()
         {
             Console.WriteLine("" +
                 "\nJakt" +

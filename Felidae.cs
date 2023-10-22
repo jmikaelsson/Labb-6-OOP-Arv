@@ -8,9 +8,8 @@ namespace Labb_6_OOP_Arv
 {
     public interface IFelidae 
     {
-        public int MaxSpeed { get; set; }
-
-
+        int MaxSpeed { get; set; }
+            
         public abstract void Hunting();
 
     }
