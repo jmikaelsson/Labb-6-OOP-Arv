@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Labb_6_OOP_Arv.Animlas
 {
-    internal class Tiger : Felidae
+    internal class Tiger : Animal, IFelidae
     {
 
         public string Length { get; set; }

@@ -71,6 +71,11 @@ namespace Labb_6_OOP_Arv
                 }
             }
         }
+
+        //Method for printing the diffrent informations about animal
+
+
+        //Method for Elefant
         public static void ElephantInfo()
         {
             List<Animal> animals = new List<Animal>();
@@ -78,15 +83,12 @@ namespace Labb_6_OOP_Arv
             Elephant elephant = new Elephant(speeches: "3", origin: "Afrika och Asien", population: 40.000, eat: "gräs, löv, frukter och små grenar och kvistar", age: 60);
             animals.Add(elephant);
 
-            foreach (Animal animal in animals)
-                if (animal is Elephant e)
-                {
-                    e.AnimalSort();
-                    e.MakeSound();
-                    e.PrintInfo();
-                    e.WorldsOldest();
-                    e.FunFact();
-                }
+            elephant.AnimalSort();
+                   elephant.MakeSound();
+                    elephant.PrintInfo();
+                    elephant.WorldsOldest();
+                    elephant.FunFact();
+                
 
             Console.WriteLine(""+
                 "\n"+
@@ -101,6 +103,8 @@ namespace Labb_6_OOP_Arv
             return;
         }
 
+
+        //Method for donkeys
         public static void DonkeyInfo()
         {
             List<Animal> animals = new List<Animal>();
@@ -109,15 +113,12 @@ namespace Labb_6_OOP_Arv
             animals.Add(donkey);
 
 
-            foreach (Animal animal in animals)
-                if (animal is Donkey d)
-                {
-                    d.AnimalSort();
-                    d.MakeSound();
-                    d.PrintInfo();
-                    d.FamusDonkey();
-                    d.FunFact();
-                }
+                    donkey.AnimalSort();
+                    donkey.MakeSound();
+                    donkey.PrintInfo();
+                    donkey.FamusDonkey();
+                    donkey.FunFact();
+                
 
             Console.WriteLine(""+
                 "\n" +
@@ -131,6 +132,8 @@ namespace Labb_6_OOP_Arv
             return;
         }
 
+
+        //Method for different cat-animals
         public static void FelidaeInfo()
         {
             while (true)
@@ -155,6 +158,7 @@ namespace Labb_6_OOP_Arv
                 if (successfulParse)
                 {
                     Console.Clear();
+                    //Tiger
                     if (userInput == 1)
                     {
                         List<Animal> felidaes = new List<Animal>();
@@ -162,16 +166,14 @@ namespace Labb_6_OOP_Arv
                         Tiger tiger = new Tiger(speeches: "2", origin: "Afrika och Asien", population: 4.500, eat: "kött", maxSpeed: 65, length: "1,9 – 2,8", weight: "65 – 170" );
                         felidaes.Add(tiger);
 
-                        foreach (Animal animal in felidaes)
-                            if (animal is Tiger t)
-                            {
-                                t.AnimalSort();
-                                t.MakeSound();
-                                t.PrintInfo();
-                                t.Hunting();
-                                t.Family();
-                                t.Territory();
-                                t.FunFact();
+                       
+                                tiger.AnimalSort();
+                                tiger.MakeSound();
+                                tiger.PrintInfo();
+                                tiger.Hunting();
+                                tiger.Family();
+                                tiger.Territory();
+                                tiger.FunFact();
 
                                 Console.WriteLine("" +
                                     "\n" +
@@ -183,8 +185,9 @@ namespace Labb_6_OOP_Arv
                                 Console.ReadKey();
                                 Console.Clear();
                                 break;
-                            }
+                            
                     }
+                    //lions
                     else if (userInput == 2)
                     {
                         List<Animal> felidaes = new List<Animal>();
@@ -192,15 +195,13 @@ namespace Labb_6_OOP_Arv
                         Lion lion = new Lion(speeches: "2", origin: "Afrika och delar av Indien", population: 30.000, eat: "Zebra, antilop", maxSpeed:74 , habitat: "savannen");
                         felidaes.Add(lion);
 
-                        foreach (Animal animal in felidaes)
-                            if (animal is Lion l)
-                            {
-                                l.AnimalSort();
-                                l.PrintInfo();
-                                l.MakeSound();
-                                l.Hunting();
-                                l.LionHabitat();
-                                l.FunFact();
+                        
+                                lion.AnimalSort();
+                                lion.PrintInfo();
+                                lion.MakeSound();
+                                lion.Hunting();
+                                lion.LionHabitat();
+                                lion.FunFact();
 
                                 Console.WriteLine("" +
                                     "\n" +
@@ -212,7 +213,7 @@ namespace Labb_6_OOP_Arv
                                 Console.ReadKey();
                                 Console.Clear();
                                 break;
-                            }
+                            
                     }
                 }
                 else

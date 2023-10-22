@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Labb_6_OOP_Arv.Animlas
 {
-    internal class Lion : Felidae
+    internal class Lion : Animal, IFelidae
     {
 
         public string Habitat { get; set; }
