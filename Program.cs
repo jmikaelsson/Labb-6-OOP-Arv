@@ -1,4 +1,5 @@
-﻿using System.Numerics;
+﻿//Josefin Mikaelsson .NET23
+using System.Numerics;
 using System;
 using Labb_6_OOP_Arv.Animlas;
 
